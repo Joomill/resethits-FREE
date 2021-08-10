@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="administrator" method="upgrade" version="3.1" position="cpanel">
+    <name>Reset Hits module</name>
+    <version>4.0.0</version>
+    <namespace>Joomill\Module\Resethits</namespace>
+    <creationDate>10-08-2021</creationDate>
+	<namespace>Joomill\Module\Resethits</namespace>
+    <creationDate>8 July 2021</creationDate>
+    <author>Joomill</author>
+    <authorEmail>info@joomill-extensions.com</authorEmail>
+    <authorUrl>www.joomill-extensions.com</authorUrl>
+    <license>http://www.gnu.org/licenseses/gpl-2.0.html GNU/GPL</license>
+    <description><![CDATA[
+		<p>Reset your article page views and more in 1 click from the backend.</p>
+		<p class="alert alert-warning"><a class="alert-link" href="index.php?option=com_modules&view=select&client_id=1"><strong>Important!</strong> You have to manually enable this module. Set the position to &quot;cpanel&quot;, enable this module and you're set! (click here)</a></p>
+		<div class="alert alert-success">This is the FREE version of Joomla Reset Hits module. Some features and support are only available in the PRO Version.</div>
+ 		<p>
+		<a href="http://joomill-extensions.com/joomla-extensions/reset-article-views-hits-counter/documentation" target="_blank" class="btn btn-primary">Manual</a>
+		<a href="http://extensions.joomla.org/extensions/site-management/analytics/content-statistics/16922" target="_blank" class="btn btn-primary">Extensions Directory</a>
+		<a href="https://www.joomill-extensions.com/extensions/reset-article-views-hits-counter" target="_blank" class="btn btn-success">Get PRO Version</a>
+		</p>
+		]]></description>
+    <files>
+        <filename module="mod_resethits">mod_resethits.php</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>
+        <folder>Helper</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="articlehits"
+                        type="radio"
+                        label="MOD_RESETHITS_ARTICLE_HITS_TITLE"
+                        layout="joomla.form.field.radio.switcher"
+                        default="1"
+                        filter="integer"
+                >
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field
+                        name="articlerevisions"
+                        type="radio"
+                        label="MOD_RESETHITS_ARTICLE_REVISIONS_TITLE"
+                        layout="joomla.form.field.radio.switcher"
+                        default="1"
+                        filter="integer"
+                >
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field
+                        name="bannerimpressions"
+                        type="radio"
+                        label="MOD_RESETHITS_BANNER_IMPRESSIONS_TITLE"
+                        layout="joomla.form.field.radio.switcher"
+                        default="1"
+                        filter="integer"
+                >
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field
+                        name="bannerclicks"
+                        type="radio"
+                        label="MOD_RESETHITS_BANNER_CLICKS_TITLE"
+                        layout="joomla.form.field.radio.switcher"
+                        default="1"
+                        filter="integer"
+                >
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field
+                        name="userpassword"
+                        type="radio"
+                        label="MOD_RESETHITS_USER_PASSWORD_TITLE"
+                        layout="joomla.form.field.radio.switcher"
+                        default="1"
+                        filter="integer"
+                >
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        class="form-select"
+                />
+            </fieldset>
+        </fields>
+    </config>
+
+    <!-- Scripts to run on installation -->
+    <scriptfile>script.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Reset Hits PRO"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_rdsubs&view=updater&format=xml&cat=2]]></server>
+	</updateservers>
+</extension>
