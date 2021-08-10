@@ -102,6 +102,6 @@
     <scriptfile>script.php</scriptfile>
 
 	<updateservers>
-		<server type="extension" priority="1" name="Reset Hits PRO"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_rdsubs&view=updater&format=xml&cat=2]]></server>
+		<server type="extension" priority="1" name="Reset Hits FREE"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_rdsubs&view=updater&format=xml&cat=2]]></server>
 	</updateservers>
 </extension>
