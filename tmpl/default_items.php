@@ -147,4 +147,4 @@ use Joomla\CMS\Language\Text;
     </li>
 <?php } ?>
 
-<div class="alert alert-success text-center">This is the FREE version of Joomla Reset Hits module. <br/> Some features and support are only available in the <a class="alert-link" target="_blank" href="https://www.joomill-extensions.com/extensions/reset-article-views-hits-counter">PRO Version</a></div>
+<div class="alert alert-success text-center small">This is the FREE version of Joomla Reset Hits module. <br/> Some features and support are only available in the <a class="alert-link" target="_blank" href="https://www.joomill-extensions.com/extensions/reset-article-views-hits-counter">PRO Version</a></div>
