@@ -2,10 +2,9 @@
 <extension type="module" client="administrator" method="upgrade" version="3.1" position="cpanel">
     <name>Reset Hits module</name>
     <version>4.0.0</version>
-    <namespace>Joomill\Module\Resethits</namespace>
     <creationDate>10-08-2021</creationDate>
 	<namespace>Joomill\Module\Resethits</namespace>
-    <creationDate>8 July 2021</creationDate>
+    <creationDate>10-08-2021</creationDate>
     <author>Joomill</author>
     <authorEmail>info@joomill-extensions.com</authorEmail>
     <authorUrl>www.joomill-extensions.com</authorUrl>
