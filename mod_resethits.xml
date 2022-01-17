@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" client="administrator" method="upgrade" version="3.1" position="cpanel">
     <name>Reset Hits module</name>
-    <version>4.0.0</version>
-    <creationDate>10-08-2021</creationDate>
-	<namespace>Joomill\Module\Resethits</namespace>
-    <author>Joomill</author>
+    <author>Joomill Extensions</author>
+    <creationDate>January 2022</creationDate>
+    <copyright>Copyright (C) 2022 Joomill. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later;</license>
     <authorEmail>info@joomill-extensions.com</authorEmail>
-    <authorUrl>www.joomill-extensions.com</authorUrl>
-    <license>http://www.gnu.org/licenseses/gpl-2.0.html GNU/GPL</license>
+    <authorUrl>https://www.joomill-extensions.com</authorUrl>
+    <version>4.0.2</version>
     <description><![CDATA[
 		<p>Reset your article page views and more in 1 click from the backend.</p>
 		<p class="alert alert-warning"><a class="alert-link" href="index.php?option=com_modules&view=select&client_id=1"><strong>Important!</strong> You have to manually enable this module. Set the position to &quot;cpanel&quot;, enable this module and you're set! (click here)</a></p>
@@ -32,7 +32,6 @@
 		]]></description>
     <files>
         <filename module="mod_resethits">mod_resethits.php</filename>
-        <filename>index.html</filename>
         <folder>language</folder>
         <folder>Helper</folder>
         <folder>tmpl</folder>
@@ -111,7 +110,8 @@
     <!-- Scripts to run on installation -->
     <scriptfile>script.php</scriptfile>
 
-	<updateservers>
-		<server type="extension" priority="1" name="Reset Hits"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_rdsubs&view=updater&format=xml&cat=2]]></server>
-	</updateservers>
+    <changelogurl><![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=changelog&amp;format=xml&amp;cat=2]]></changelogurl>
+
+    <updateservers><server type="extension" name="Reset Hits"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=updater&amp;format=xml&amp;cat=2]]></server></updateservers>
+
 </extension>
