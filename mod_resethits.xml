@@ -2,12 +2,12 @@
 <extension type="module" client="administrator" method="upgrade" version="3.1" position="cpanel">
     <name>Reset Hits module</name>
     <author>Joomill Extensions</author>
-    <creationDate>January 2022</creationDate>
-    <copyright>Copyright (C) 2022 Joomill. All rights reserved.</copyright>
+    <creationDate>October 2023</creationDate>
+    <copyright>Copyright (C) 2023 Joomill. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later;</license>
     <authorEmail>info@joomill-extensions.com</authorEmail>
     <authorUrl>https://www.joomill-extensions.com</authorUrl>
-    <version>4.0.2</version>
+    <version>4.1.0</version>
     <description><![CDATA[
 		<p>Reset your article page views and more in 1 click from the backend.</p>
 		<p class="alert alert-warning"><a class="alert-link" href="index.php?option=com_modules&view=select&client_id=1"><strong>Important!</strong> You have to manually enable this module. Set the position to &quot;cpanel&quot;, enable this module and you're set! (click here)</a></p>

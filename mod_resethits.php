@@ -1,11 +1,15 @@
 <?php
 /*
  *  package: Reset Hits module - FREE Version
- *  copyright: Copyright (c) 2022. Jeroen Moolenschot | Joomill
+ *  copyright: Copyright (c) 2023. Jeroen Moolenschot | Joomill
  *  license: GNU General Public License version 2 or later
  *  link: https://www.joomill-extensions.com
  */
 
-defined('_JEXEC') or die('Restricted access');
+// No direct access.
+defined('_JEXEC') or die;
 
-require(JModuleHelper::getLayoutPath('mod_resethits', 'default'));
+use Joomla\CMS\Helper\ModuleHelper;
+
+// Get Joomla Layout
+require ModuleHelper::getLayoutPath('mod_resethits', $params->get('layout', 'default'));
