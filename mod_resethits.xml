@@ -2,34 +2,13 @@
 <extension type="module" client="administrator" method="upgrade" version="3.1" position="cpanel">
     <name>Reset Hits module</name>
     <author>Joomill Extensions</author>
-    <creationDate>October 2023</creationDate>
-    <copyright>Copyright (C) 2023 Joomill. All rights reserved.</copyright>
+    <creationDate>March 2025</creationDate>
+    <copyright>Copyright (C) 2025 Joomill. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later;</license>
     <authorEmail>info@joomill-extensions.com</authorEmail>
     <authorUrl>https://www.joomill-extensions.com</authorUrl>
-    <version>4.1.0</version>
-    <description><![CDATA[
-		<p>Reset your article page views and more in 1 click from the backend.</p>
-		<p class="alert alert-warning"><a class="alert-link" href="index.php?option=com_modules&view=select&client_id=1"><strong>Important!</strong> You have to manually enable this module. Set the position to &quot;cpanel&quot;, enable this module and you're set! (click here)</a></p>
-		<div class="alert alert-success">This is the FREE version of Joomla Reset Hits module. Some features and support are only available in the PRO Version.</div>
- 		<p>
-		<a href="http://joomill-extensions.com/joomla-extensions/reset-article-views-hits-counter/documentation" target="_blank" class="btn btn-primary">Manual</a>
-		<a href="http://extensions.joomla.org/extensions/site-management/analytics/content-statistics/16922" target="_blank" class="btn btn-primary">Extensions Directory</a>
-		<a href="https://www.joomill-extensions.com/extensions/reset-article-views-hits-counter" target="_blank" class="btn btn-success">Get PRO Version</a>
-		</p>
-		<br/>
-		<p>
-		Follow me for more information about Joomla and updates for Joomill extensions:<br/>
-		<a href="https://www.twitter.com/Joomill" target="_blank"><i class="fab fa-twitter-square fa-2x" style="color:#1DA1F2;"></i></a>
-		<a href="https://www.instagram.com/Joomill" target="_blank"><i class="fab fa-instagram-square fa-2x" style="color:#E1306C;"></i></a>
-		<a href="https://www.facebook.com/Joomill" target="_blank"><i class="fab fa-facebook-square fa-2x" style="color:#4267B2;"></i></a>
-		</p>
-		<style>
-		a[target="_blank"]::before {
-			content: "";
-		}
-		</style>
-		]]></description>
+    <version>4.2.0</version>
+    <description>MOD_RESETHITS_XML_DESCRIPTION</description>
     <files>
         <filename module="mod_resethits">mod_resethits.php</filename>
         <folder>language</folder>
