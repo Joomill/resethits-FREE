@@ -19,7 +19,7 @@ class ResethitsHelper
     public static function getLanguage()
     {
         $Language = '';
-        $db = Factory::getDBO();
+        $db = Factory::getContainer()->get('DatabaseDriver');
         $query = $db->getQuery(true)
             ->select('lang_code,title')
             ->from('#__languages');
@@ -37,7 +37,7 @@ class ResethitsHelper
     public static function getContentArticles()
     {
         $ContentArticle = '';
-        $db = Factory::getDBO();
+        $db = Factory::getContainer()->get('DatabaseDriver');
         $query = $db->getQuery(true)
             ->select('id,title')
             ->from($db->quoteName('#__content'));
@@ -54,7 +54,7 @@ class ResethitsHelper
     public static function getContentCategories()
     {
         $ContentCategory = '';
-        $db = Factory::getDBO();
+        $db = Factory::getContainer()->get('DatabaseDriver');
         $query = $db->getQuery(true)
             ->select('id,title')
             ->from($db->quoteName('#__categories'))
@@ -72,7 +72,7 @@ class ResethitsHelper
     public static function getContentAuthor()
     {
         $ContentAuthor = '';
-        $db = Factory::getDBO();
+        $db = Factory::getContainer()->get('DatabaseDriver');
         $query = $db->getQuery(true)
             ->select('id,name')
             ->from('#__users');
@@ -112,7 +112,7 @@ class ResethitsHelper
     public static function getBanners()
     {
         $Banners = '';
-        $db = Factory::getDBO();
+        $db = Factory::getContainer()->get('DatabaseDriver');
         $query = $db->getQuery(true)
             ->select('id,name')
             ->from('#__banners');
@@ -129,7 +129,7 @@ class ResethitsHelper
     public static function getBannerCategories()
     {
         $BannerCategory = '';
-        $db = Factory::getDBO();
+        $db = Factory::getContainer()->get('DatabaseDriver');
         $query = $db->getQuery(true)
             ->select('id,title')
             ->from($db->quoteName('#__categories'))
@@ -147,7 +147,7 @@ class ResethitsHelper
     public static function getBannerClients()
     {
         $BannerClients = '';
-        $db = Factory::getDBO();
+        $db = Factory::getContainer()->get('DatabaseDriver');
         $query = $db->getQuery(true)
             ->select('id,name')
             ->from('#__banner_clients');
@@ -164,7 +164,7 @@ class ResethitsHelper
     public static function getBannerLanguage()
     {
         $BannerLanguage = '';
-        $db = Factory::getDBO();
+        $db = Factory::getContainer()->get('DatabaseDriver');
         $query = $db->getQuery(true)
             ->select('lang_code,title')
             ->from('#__languages');
@@ -204,7 +204,7 @@ class ResethitsHelper
     public static function getUserPassword()
     {
         $UserPassword = '';
-        $db = Factory::getDBO();
+        $db = Factory::getContainer()->get('DatabaseDriver');
         $query = $db->getQuery(true)
             ->select('id,name')
             ->from('#__users');
@@ -221,7 +221,7 @@ class ResethitsHelper
     public static function getUserGroupPassword()
     {
         $UserGroupPassword = '';
-        $db = Factory::getDBO();
+        $db = Factory::getContainer()->get('DatabaseDriver');
         $query = $db->getQuery(true)
             ->select('id,title')
             ->from('#__usergroups');

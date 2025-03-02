@@ -42,7 +42,7 @@ use Joomla\CMS\Router\Route;
 
 <?php
 if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_content_hits')) {
-    $db = Factory::getDbo();
+    $db = Factory::getContainer()->get('DatabaseDriver');
     $query = $db->getQuery(true)
         ->update($db->quoteName('#__content'))
         ->set($db->quoteName('hits') . ' = 0');
@@ -52,7 +52,7 @@ if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_content_hits')
 }
 
 if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_content_revisions')) {
-    $db = Factory::getDbo();
+    $db = Factory::getContainer()->get('DatabaseDriver');
     $query = $db->getQuery(true)
         ->update($db->quoteName('#__content'))
         ->set($db->quoteName('version') . ' = 0');
@@ -62,7 +62,7 @@ if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_content_revisi
 }
 
 if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_banner_impressions')) {
-    $db = Factory::getDbo();
+    $db = Factory::getContainer()->get('DatabaseDriver');
     $query = $db->getQuery(true)
         ->update($db->quoteName('#__banners'))
         ->set($db->quoteName('impmade') . ' = 0');
@@ -72,7 +72,7 @@ if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_banner_impress
 }
 
 if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_banner_clicks')) {
-    $db = Factory::getDbo();
+    $db = Factory::getContainer()->get('DatabaseDriver');
     $query = $db->getQuery(true)
         ->update($db->quoteName('#__banners'))
         ->set($db->quoteName('clicks') . ' = 0');
@@ -82,7 +82,7 @@ if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_banner_clicks'
 }
 
 if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_user_password')) {
-    $db = Factory::getDbo();
+    $db = Factory::getContainer()->get('DatabaseDriver');
     $query = $db->getQuery(true)
         ->update($db->quoteName('#__users'))
         ->set($db->quoteName('resetCount') . ' = 0');
