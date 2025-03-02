@@ -71,22 +71,6 @@ class mod_ResethitsInstallerScript
         }
         return true;
     }
-
-    public function postflight($type, $parent)
-    {
-        $this->installUpdatePlugin($type, $parent);
-    }
-
-    private function installUpdatePlugin($type, $parent)
-    {
-        $plugin = PluginHelper::getPlugin('installer', 'resethits');
-        if ($plugin) {
-            $inst = new JInstaller();
-            $inst->uninstall('plugin', $plugin->id);
-        }
-
-    }
-
 }
 
 
