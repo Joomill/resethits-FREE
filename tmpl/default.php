@@ -6,6 +6,7 @@
  *  link: https://www.joomill-extensions.com
  */
 
+// No direct access.
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;

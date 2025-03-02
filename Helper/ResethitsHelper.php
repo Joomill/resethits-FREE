@@ -8,11 +8,12 @@
 
 namespace Joomill\Module\Resethits\Administrator\Helper;
 
+// No direct access.
+\defined('_JEXEC') or die;
+
 use Joomla\CMS\Factory;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
-
-\defined('_JEXEC') or die;
 
 class ResethitsHelper
 {
