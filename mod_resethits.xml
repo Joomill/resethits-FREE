@@ -82,6 +82,12 @@
                         label="JFIELD_ALT_LAYOUT_LABEL"
                         class="form-select"
                 />
+                <field
+                        name="header_icon"
+                        type="text"
+                        label="Header Icon"
+                        default="fa-solid fa-arrow-rotate-left"
+                />
             </fieldset>
         </fields>
     </config>
