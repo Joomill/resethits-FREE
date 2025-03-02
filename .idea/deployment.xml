@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="Joomla 4 FREE" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="Joomla 4 DEV">
+      <paths name="Digraphical DEV">
         <serverdata>
           <mappings>
-            <mapping deploy="administrator\modules\mod_resethits" local="$PROJECT_DIR$" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="Joomla 4 FREE">
+      <paths name="Laravel">
         <serverdata>
           <mappings>
-            <mapping deploy="administrator\modules\mod_resethits" local="$PROJECT_DIR$" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="extensions.joomill.dev">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/administrator/modules/mod_resethits" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="wilbert DEV">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
