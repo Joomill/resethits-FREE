@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" client="administrator" method="upgrade" version="3.1" position="cpanel">
-    <name>Reset Hits module</name>
-    <author>Joomill Extensions</author>
-    <creationDate>March 2025</creationDate>
-    <copyright>Copyright (C) 2025 Joomill. All rights reserved.</copyright>
-    <license>GNU General Public License version 2 or later;</license>
+<extension type="module" client="administrator" method="upgrade" position="cpanel">
+    <name>MOD_RESETHITS</name>
+    <description>MOD_RESETHITS_XML_DESCRIPTION</description>
+    <author>Jeroen Moolenschot | Joomill</author>
     <authorEmail>info@joomill-extensions.com</authorEmail>
     <authorUrl>https://www.joomill-extensions.com</authorUrl>
+    <license>GNU General Public License version 3 or later</license>
+    <creationDate>March 2025</creationDate>
+    <copyright>Copyright (c) 2025 Joomill Extensions. All rights reserved.</copyright>
     <version>4.2.0</version>
     <description>MOD_RESETHITS_XML_DESCRIPTION</description>
     <files>
@@ -92,11 +93,15 @@
         </fields>
     </config>
 
-    <!-- Scripts to run on installation -->
     <scriptfile>script.php</scriptfile>
 
-    <changelogurl><![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=changelog&amp;format=xml&amp;cat=2]]></changelogurl>
+    <changelogurl>
+        <![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=changelog&amp;format=xml&amp;cat=2]]>
+    </changelogurl>
 
-    <updateservers><server type="extension" name="Reset Hits"><![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=updater&amp;format=xml&amp;cat=2]]></server></updateservers>
-
+    <updateservers>
+        <server type="extension" name="Reset Hits">
+            <![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=updater&amp;format=xml&amp;cat=2]]>
+        </server>
+    </updateservers>
 </extension>
