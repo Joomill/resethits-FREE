@@ -9,11 +9,12 @@
     <creationDate>March 2025</creationDate>
     <copyright>Copyright (c) 2025 Joomill Extensions. All rights reserved.</copyright>
     <version>4.2.0</version>
-    <description>MOD_RESETHITS_XML_DESCRIPTION</description>
+    <namespace path="src">Joomill\Module\Resethits</namespace>
+
     <files>
-        <filename module="mod_resethits">mod_resethits.php</filename>
         <folder>language</folder>
-        <folder>Helper</folder>
+        <folder module="mod_resethits">services</folder>
+        <folder>src</folder>
         <folder>tmpl</folder>
     </files>
 
