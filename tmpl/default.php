@@ -34,61 +34,61 @@ use Joomla\CMS\Router\Route;
 
     <form action="<?php echo Route::_('index.php'); ?>" id="resethits" name="resethits" method="post">
         <ul id="resethits-wrapper" class="list-group list-group-flush resethits">
-            <?php require ModuleHelper::getLayoutPath('mod_resethits', $params->get('layout', 'default') . '_items'); ?>
+			<?php require ModuleHelper::getLayoutPath('mod_resethits', $params->get('layout', 'default') . '_items'); ?>
         </ul>
-        <?php require ModuleHelper::getLayoutPath('mod_resethits', $params->get('layout', 'default') . '_pro_article_options'); ?>
-        <?php require ModuleHelper::getLayoutPath('mod_resethits', $params->get('layout', 'default') . '_pro_banner_options'); ?>
-        <?php require ModuleHelper::getLayoutPath('mod_resethits', $params->get('layout', 'default') . '_pro_user_options'); ?>
+		<?php require ModuleHelper::getLayoutPath('mod_resethits', $params->get('layout', 'default') . '_pro_article_options'); ?>
+		<?php require ModuleHelper::getLayoutPath('mod_resethits', $params->get('layout', 'default') . '_pro_banner_options'); ?>
+		<?php require ModuleHelper::getLayoutPath('mod_resethits', $params->get('layout', 'default') . '_pro_user_options'); ?>
     </form>
 
 <?php
 if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_content_hits')) {
-    $db = Factory::getContainer()->get('DatabaseDriver');
-    $query = $db->getQuery(true)
-        ->update($db->quoteName('#__content'))
-        ->set($db->quoteName('hits') . ' = 0');
+	$db = Factory::getContainer()->get('DatabaseDriver');
+	$query = $db->getQuery(true)
+		->update($db->quoteName('#__content'))
+		->set($db->quoteName('hits') . ' = 0');
 
-    $db->setQuery($query)->execute();
-    Factory::getApplication()->enqueueMessage(Text::_('MOD_RESETHITS_ARTICLE_HITS_SUCCESS'), 'success');
+	$db->setQuery($query)->execute();
+	Factory::getApplication()->enqueueMessage(Text::_('MOD_RESETHITS_ARTICLE_HITS_SUCCESS'), 'success');
 }
 
 if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_content_revisions')) {
-    $db = Factory::getContainer()->get('DatabaseDriver');
-    $query = $db->getQuery(true)
-        ->update($db->quoteName('#__content'))
-        ->set($db->quoteName('version') . ' = 0');
+	$db = Factory::getContainer()->get('DatabaseDriver');
+	$query = $db->getQuery(true)
+		->update($db->quoteName('#__content'))
+		->set($db->quoteName('version') . ' = 0');
 
-    $db->setQuery($query)->execute();
-    Factory::getApplication()->enqueueMessage(Text::_('MOD_RESETHITS_ARTICLE_REVISIONS_SUCCESS'), 'success');
+	$db->setQuery($query)->execute();
+	Factory::getApplication()->enqueueMessage(Text::_('MOD_RESETHITS_ARTICLE_REVISIONS_SUCCESS'), 'success');
 }
 
 if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_banner_impressions')) {
-    $db = Factory::getContainer()->get('DatabaseDriver');
-    $query = $db->getQuery(true)
-        ->update($db->quoteName('#__banners'))
-        ->set($db->quoteName('impmade') . ' = 0');
+	$db = Factory::getContainer()->get('DatabaseDriver');
+	$query = $db->getQuery(true)
+		->update($db->quoteName('#__banners'))
+		->set($db->quoteName('impmade') . ' = 0');
 
-    $db->setQuery($query)->execute();
-    Factory::getApplication()->enqueueMessage(Text::_('MOD_RESETHITS_BANNER_IMPRESSIONS_SUCCESS'), 'success');
+	$db->setQuery($query)->execute();
+	Factory::getApplication()->enqueueMessage(Text::_('MOD_RESETHITS_BANNER_IMPRESSIONS_SUCCESS'), 'success');
 }
 
 if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_banner_clicks')) {
-    $db = Factory::getContainer()->get('DatabaseDriver');
-    $query = $db->getQuery(true)
-        ->update($db->quoteName('#__banners'))
-        ->set($db->quoteName('clicks') . ' = 0');
+	$db = Factory::getContainer()->get('DatabaseDriver');
+	$query = $db->getQuery(true)
+		->update($db->quoteName('#__banners'))
+		->set($db->quoteName('clicks') . ' = 0');
 
-    $db->setQuery($query)->execute();
-    Factory::getApplication()->enqueueMessage(Text::_('MOD_RESETHITS_BANNER_IMPRESSIONS_SUCCESS'), 'success');
+	$db->setQuery($query)->execute();
+	Factory::getApplication()->enqueueMessage(Text::_('MOD_RESETHITS_BANNER_IMPRESSIONS_SUCCESS'), 'success');
 }
 
 if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_user_password')) {
-    $db = Factory::getContainer()->get('DatabaseDriver');
-    $query = $db->getQuery(true)
-        ->update($db->quoteName('#__users'))
-        ->set($db->quoteName('resetCount') . ' = 0');
+	$db = Factory::getContainer()->get('DatabaseDriver');
+	$query = $db->getQuery(true)
+		->update($db->quoteName('#__users'))
+		->set($db->quoteName('resetCount') . ' = 0');
 
-    $db->setQuery($query)->execute();
-    Factory::getApplication()->enqueueMessage(Text::_('MOD_RESETHITS_USER_PASSWORD_SUCCESS'), 'success');
+	$db->setQuery($query)->execute();
+	Factory::getApplication()->enqueueMessage(Text::_('MOD_RESETHITS_USER_PASSWORD_SUCCESS'), 'success');
 }
 ?>

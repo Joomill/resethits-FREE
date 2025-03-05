@@ -13,8 +13,6 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\Installer\InstallerAdapter;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Log\Log;
-use Joomla\CMS\Plugin\PluginHelper;
-use Joomla\CMS\Table\Table;
 
 /**
  * Script file of Reset Hits module
@@ -23,56 +21,56 @@ use Joomla\CMS\Table\Table;
  */
 class mod_ResethitsInstallerScript
 {
-    /**
-     * Minimum Joomla version to check
-     *
-     * @var    string
-     * @since  4.0.0
-     */
-    private $minimumJoomlaVersion = '4.0';
+	/**
+	 * Minimum Joomla version to check
+	 *
+	 * @var    string
+	 * @since  4.0.0
+	 */
+	private $minimumJoomlaVersion = '4.0';
 
-    /**
-     * Minimum PHP version to check
-     *
-     * @var    string
-     * @since  4.0.0
-     */
-    private $minimumPHPVersion = JOOMLA_MINIMUM_PHP;
+	/**
+	 * Minimum PHP version to check
+	 *
+	 * @var    string
+	 * @since  4.0.0
+	 */
+	private $minimumPHPVersion = JOOMLA_MINIMUM_PHP;
 
 
-    /**
-     * Function called before extension installation/update/removal procedure commences
-     *
-     * @param string $type The type of change (install, update or discover_install, not uninstall)
-     * @param InstallerAdapter $parent The class calling this method
-     * @return  boolean  True on success
-     * @throws Exception
-     * @since  4.0.0
-     */
-    public function preflight($type, $parent): bool
-    {
-        if ($type !== 'uninstall') {
-            // Check for the minimum PHP version before continuing
-            if (!empty($this->minimumPHPVersion) && version_compare(PHP_VERSION, $this->minimumPHPVersion, '<')) {
-                Log::add(
-                    Text::sprintf('JLIB_INSTALLER_MINIMUM_PHP', $this->minimumPHPVersion),
-                    Log::WARNING,
-                    'jerror'
-                );
-                return false;
-            }
-            // Check for the minimum Joomla version before continuing
-            if (!empty($this->minimumJoomlaVersion) && version_compare(JVERSION, $this->minimumJoomlaVersion, '<')) {
-                Log::add(
-                    Text::sprintf('JLIB_INSTALLER_MINIMUM_JOOMLA', $this->minimumJoomlaVersion),
-                    Log::WARNING,
-                    'jerror'
-                );
-                return false;
-            }
-        }
-        return true;
-    }
+	/**
+	 * Function called before extension installation/update/removal procedure commences
+	 *
+	 * @param string $type The type of change (install, update or discover_install, not uninstall)
+	 * @param InstallerAdapter $parent The class calling this method
+	 * @return  boolean  True on success
+	 * @throws Exception
+	 * @since  4.0.0
+	 */
+	public function preflight($type, $parent): bool
+	{
+		if ($type !== 'uninstall') {
+			// Check for the minimum PHP version before continuing
+			if (!empty($this->minimumPHPVersion) && version_compare(PHP_VERSION, $this->minimumPHPVersion, '<')) {
+				Log::add(
+					Text::sprintf('JLIB_INSTALLER_MINIMUM_PHP', $this->minimumPHPVersion),
+					Log::WARNING,
+					'jerror'
+				);
+				return false;
+			}
+			// Check for the minimum Joomla version before continuing
+			if (!empty($this->minimumJoomlaVersion) && version_compare(JVERSION, $this->minimumJoomlaVersion, '<')) {
+				Log::add(
+					Text::sprintf('JLIB_INSTALLER_MINIMUM_JOOMLA', $this->minimumJoomlaVersion),
+					Log::WARNING,
+					'jerror'
+				);
+				return false;
+			}
+		}
+		return true;
+	}
 
 	/**
 	 * Function called during the installation of the extension
@@ -98,7 +96,7 @@ class mod_ResethitsInstallerScript
 	private function enableModule()
 	{
 		// Check if Module has not been published yet
-		$db    = Factory::getContainer()->get('DatabaseDriver');
+		$db = Factory::getContainer()->get('DatabaseDriver');
 		$query = $db->getQuery(true);
 		$query->select($db->quoteName('id'));
 		$query->from($db->quoteName('#__modules'));
@@ -110,11 +108,10 @@ class mod_ResethitsInstallerScript
 
 		// If the Module has not been published, publish + assign it
 
-		if (empty($moduleId))
-		{
+		if (empty($moduleId)) {
 			// Change Module settings to auto publish it on position cpanel
-			$query      = $db->getQuery(true);
-			$fields     = array(
+			$query = $db->getQuery(true);
+			$fields = array(
 				$db->quoteName('title') . ' = ' . $db->quote('Reset Hits module'),
 				$db->quoteName('published') . ' = 1',
 				$db->quoteName('position') . ' = ' . $db->quote('cpanel'),
@@ -136,7 +133,7 @@ class mod_ResethitsInstallerScript
 			$moduleId = $db->loadResult();
 
 			// Add to modules_menu
-			$query  = $db->getQuery(true);
+			$query = $db->getQuery(true);
 			$fields = array(
 				$db->quoteName('moduleid') . ' = ' . $db->quote($moduleId),
 				$db->quoteName('menuid') . ' = 0',
@@ -151,16 +148,15 @@ class mod_ResethitsInstallerScript
 	/**
 	 * Function called after extension installation/update/removal procedure commences
 	 *
-	 * @param   string            $type    The type of change (install, update or discover_install, not uninstall)
-	 * @param   InstallerAdapter  $parent  The class calling this method
+	 * @param string $type The type of change (install, update or discover_install, not uninstall)
+	 * @param InstallerAdapter $parent The class calling this method
 	 *
 	 * @return  boolean  True on success
 	 * @since  4.0.0
 	 */
 	public function postflight($type, $parent)
 	{
-		if ($type === 'install')
-		{
+		if ($type === 'install') {
 			echo '<style>a[target="_blank"]::before {display: none};</style>';
 			echo '<div class="mb-3 text-center"><img src="https://www.joomill-extensions.com/images/joomill-logo.png" alt="Joomill Extensions" /></div>';
 			echo '<div class="mb-3 text-center"><strong>' . Text::_('MOD_RESETHITS_XML_DESCRIPTION') . '</strong></div>';
@@ -184,8 +180,7 @@ class mod_ResethitsInstallerScript
 			echo '<a class="m-2" href="https://community.joomla.org/service-providers-directory/listings/67:joomill.html" target="_blank"><i class="fa-brands fa-joomla"> </i></a>';
 			echo '</div>';
 		}
-		if ($type === 'uninstall')
-		{
+		if ($type === 'uninstall') {
 			echo '<style>a[target="_blank"]::before {display: none};</style>';
 			echo '<div class="mb-3 text-center"><img src="https://www.joomill-extensions.com/images/joomill-logo.png" alt="Joomill Extensions" /></div>';
 			echo '<br>';

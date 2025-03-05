@@ -9,13 +9,12 @@
 // No direct access.
 defined('_JEXEC') or die;
 
-use Joomill\Module\Resethits\Administrator\Helper\ResethitsHelper;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
 
 Factory::getApplication()->getDocument()->getWebAssetManager()
-    ->usePreset('choicesjs')
-    ->useScript('webcomponent.field-fancy-select');
+	->usePreset('choicesjs')
+	->useScript('webcomponent.field-fancy-select');
 ?>
 
 <div class="row">

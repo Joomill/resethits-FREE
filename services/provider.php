@@ -16,20 +16,20 @@ use Joomla\DI\Container;
 use Joomla\DI\ServiceProviderInterface;
 
 return new class () implements ServiceProviderInterface {
-    /**
-     * Registers the service provider with a DI container.
-     *
-     * @param   Container  $container  The DI container.
-     *
-     * @return  void
-     *
-     * @since   5.1.0
-     */
-    public function register(Container $container)
-    {
-        $container->registerServiceProvider(new ModuleDispatcherFactory('\\Joomill\\Module\\Resethits'));
-        $container->registerServiceProvider(new HelperFactory('\\Joomill\\Module\\Resethits\\Administrator\\Helper'));
+	/**
+	 * Registers the service provider with a DI container.
+	 *
+	 * @param Container $container The DI container.
+	 *
+	 * @return  void
+	 *
+	 * @since   5.1.0
+	 */
+	public function register(Container $container)
+	{
+		$container->registerServiceProvider(new ModuleDispatcherFactory('\\Joomill\\Module\\Resethits'));
+		$container->registerServiceProvider(new HelperFactory('\\Joomill\\Module\\Resethits\\Administrator\\Helper'));
 
-        $container->registerServiceProvider(new Module());
-    }
+		$container->registerServiceProvider(new Module());
+	}
 };

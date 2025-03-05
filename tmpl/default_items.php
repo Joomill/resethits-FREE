@@ -9,17 +9,16 @@
 // No direct access.
 defined('_JEXEC') or die;
 
-use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\CMS\Language\Text;
 
 ?>
-     <!--Article Hits-->
+<!--Article Hits-->
 <?php if ($params->get('articlehits')) { ?>
     <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
             <div class="sample-data__title me-2">
                 <span class="sample-data__icon icon-file-alt me-1" aria-hidden="true"></span>
-                <?php echo Text::_('MOD_RESETHITS_ARTICLE_HITS_TITLE'); ?>
+				<?php echo Text::_('MOD_RESETHITS_ARTICLE_HITS_TITLE'); ?>
             </div>
             <div class="buttons">
                 <button class="btn btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#pro-article-options"
@@ -40,13 +39,13 @@ use Joomla\CMS\Language\Text;
     </li>
 <?php } ?>
 
-    <!--Article Revisions-->
+<!--Article Revisions-->
 <?php if ($params->get('articlerevisions')) { ?>
     <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
             <div class="sample-data__title me-2">
                 <span class="sample-data__icon icon-file-alt me-1" aria-hidden="true"></span>
-                <?php echo Text::_('MOD_RESETHITS_ARTICLE_REVISIONS_TITLE'); ?>
+				<?php echo Text::_('MOD_RESETHITS_ARTICLE_REVISIONS_TITLE'); ?>
             </div>
             <div class="buttons">
                 <button class="btn btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#pro-article-options"
@@ -67,13 +66,13 @@ use Joomla\CMS\Language\Text;
     </li>
 <?php } ?>
 
-    <!--Banner Impressions-->
+<!--Banner Impressions-->
 <?php if ($params->get('bannerimpressions')) { ?>
     <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
             <div class="sample-data__title me-2">
                 <span class="sample-data__icon icon-bookmark me-1" aria-hidden="true"></span>
-                <?php echo Text::_('MOD_RESETHITS_BANNER_IMPRESSIONS_TITLE'); ?>
+				<?php echo Text::_('MOD_RESETHITS_BANNER_IMPRESSIONS_TITLE'); ?>
             </div>
             <div class="buttons">
                 <button class="btn btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#pro-banner-options"
@@ -94,13 +93,13 @@ use Joomla\CMS\Language\Text;
     </li>
 <?php } ?>
 
-    <!--Banner Clicks-->
+<!--Banner Clicks-->
 <?php if ($params->get('bannerclicks')) { ?>
     <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
             <div class="sample-data__title me-2">
                 <span class="sample-data__icon icon-bookmark me-1" aria-hidden="true"></span>
-                <?php echo Text::_('MOD_RESETHITS_BANNER_CLICKS_TITLE'); ?>
+				<?php echo Text::_('MOD_RESETHITS_BANNER_CLICKS_TITLE'); ?>
             </div>
             <div class="buttons">
                 <button class="btn btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#pro-banner-options"
@@ -121,13 +120,13 @@ use Joomla\CMS\Language\Text;
     </li>
 <?php } ?>
 
-    <!--User Password-->
+<!--User Password-->
 <?php if ($params->get('userpassword')) { ?>
     <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
             <div class="sample-data__title me-2">
                 <span class="sample-data__icon icon-users" aria-hidden="true"></span>
-                <?php echo Text::_('MOD_RESETHITS_USER_PASSWORD_TITLE'); ?>
+				<?php echo Text::_('MOD_RESETHITS_USER_PASSWORD_TITLE'); ?>
             </div>
             <div class="buttons">
                 <button class="btn btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#pro-user-options"
@@ -146,6 +145,9 @@ use Joomla\CMS\Language\Text;
         </div>
         <p class="sample-data__desc small mt-1"><?php echo Text::_('MOD_RESETHITS_USER_PASSWORD_DESC'); ?></p>
     </li>
-<?php } ?>
+<?php } //TODO: Translate alert?>
 
-<div class="alert alert-success text-center small m-0">This is the FREE version of Joomla Reset Hits module. <br/> Some features and support are only available in the <a class="alert-link" target="_blank" href="https://www.joomill-extensions.com/extensions/reset-article-views-hits-counter">PRO Version</a></div>
+<div class="alert alert-success text-center small m-0">This is the FREE version of Joomla Reset Hits module. <br/> Some
+    features and support are only available in the <a class="alert-link" target="_blank"
+                                                      href="https://www.joomill-extensions.com/extensions/reset-article-views-hits-counter">PRO
+        Version</a></div>
