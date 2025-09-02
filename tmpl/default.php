@@ -91,4 +91,14 @@ if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_user_password'
 	$db->setQuery($query)->execute();
 	Factory::getApplication()->enqueueMessage(Text::_('MOD_RESETHITS_USER_PASSWORD_SUCCESS'), 'success');
 }
+
+if ((isset($_POST['resethits'])) and ($_POST['resethits'] == 'com_redirects')) {
+    $db = Factory::getContainer()->get('DatabaseDriver');
+    $query = $db->getQuery(true)
+            ->update($db->quoteName('#__redirect_links'))
+            ->set($db->quoteName('hits') . ' = 0');
+
+    $db->setQuery($query)->execute();
+    Factory::getApplication()->enqueueMessage(Text::_('MOD_RESETHITS_REDIRECTS_SUCCESS'), 'success');
+}
 ?>

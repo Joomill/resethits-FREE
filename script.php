@@ -116,7 +116,7 @@ class mod_ResethitsInstallerScript
 				$db->quoteName('published') . ' = 1',
 				$db->quoteName('position') . ' = ' . $db->quote('cpanel'),
 				$db->quoteName('access') . ' = 3',
-				$db->quoteName('params') . ' = ' . $db->quote('{"articlehits":1,"articlerevisions":1,"bannerimpressions":1,"bannerclicks":1,"userpassword":1,
+				$db->quoteName('params') . ' = ' . $db->quote('{"articlehits":1,"articlerevisions":1,"bannerimpressions":1,"bannerclicks":1,"userpassword":1,"redirects":1,
 				"layout":"_:default","header_icon":"fa-solid fa-arrow-rotate-left","module_tag":"div","bootstrap_size":"0","header_tag":"h2","header_class":"","style":"0"}'),
 			);
 			$conditions = array($db->quoteName('module') . ' = ' . $db->quote('mod_resethits'));
