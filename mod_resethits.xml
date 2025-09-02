@@ -6,7 +6,7 @@
     <authorEmail>info@joomill-extensions.com</authorEmail>
     <authorUrl>https://www.joomill-extensions.com</authorUrl>
     <license>GNU General Public License version 3 or later</license>
-    <creationDate>March 2025</creationDate>
+    <creationDate>September 2025</creationDate>
     <copyright>Copyright (c) 2025 Joomill Extensions. All rights reserved.</copyright>
     <version>5.0.0</version>
     <namespace path="src">Joomill\Module\Resethits</namespace>
