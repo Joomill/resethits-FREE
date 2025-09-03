@@ -14,7 +14,7 @@ use Joomla\CMS\Language\Text;
 
 ?>
      <!--Article Hits-->
-<?php if ($params->get('articlehits')) { ?>
+<?php if ($params->get('articlehits', 1, 'INT')) { ?>
     <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
             <div class="sample-data__title me-2">
@@ -41,7 +41,7 @@ use Joomla\CMS\Language\Text;
 <?php } ?>
 
     <!--Article Revisions-->
-<?php if ($params->get('articlerevisions')) { ?>
+<?php if ($params->get('articlerevisions', 1, 'INT')) { ?>
     <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
             <div class="sample-data__title me-2">
@@ -68,7 +68,7 @@ use Joomla\CMS\Language\Text;
 <?php } ?>
 
     <!--Banner Impressions-->
-<?php if ($params->get('bannerimpressions')) { ?>
+<?php if ($params->get('bannerimpressions', 1, 'INT')) { ?>
     <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
             <div class="sample-data__title me-2">
@@ -95,7 +95,7 @@ use Joomla\CMS\Language\Text;
 <?php } ?>
 
     <!--Banner Clicks-->
-<?php if ($params->get('bannerclicks')) { ?>
+<?php if ($params->get('bannerclicks', 1, 'INT')) { ?>
     <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
             <div class="sample-data__title me-2">
@@ -122,7 +122,7 @@ use Joomla\CMS\Language\Text;
 <?php } ?>
 
 <!--User Password-->
-<?php if ($params->get('userpassword')) { ?>
+<?php if ($params->get('userpassword', 1, 'INT')) { ?>
     <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
             <div class="sample-data__title me-2">
@@ -149,7 +149,7 @@ use Joomla\CMS\Language\Text;
 <?php } ?>
 
 <!--Redirects-->
-<?php if ($params->get('redirects')) { ?>
+<?php if ($params->get('redirects', 1, 'INT')) { ?>
     <li class="list-group-item">
         <div class="d-flex justify-content-between align-items-center">
             <div class="sample-data__title me-2">
