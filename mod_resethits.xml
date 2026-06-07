@@ -3,14 +3,15 @@
     <name>MOD_RESETHITS</name>
     <description>MOD_RESETHITS_XML_DESCRIPTION</description>
     <author>Jeroen Moolenschot | Joomill</author>
-    <authorEmail>info@joomill-extensions.com</authorEmail>
+    <authorEmail>info@joomill.nl</authorEmail>
     <authorUrl>https://www.joomill-extensions.com</authorUrl>
     <license>GNU General Public License version 3 or later</license>
-    <creationDate>September 2025</creationDate>
-    <copyright>Copyright (c) 2025 Joomill Extensions. All rights reserved.</copyright>
-    <version>5.0.0</version>
+    <creationDate>June 2026</creationDate>
+    <copyright>(C) 2026 Joomill Extensions</copyright>
+    <version>5.1.0</version>
     <namespace path="src">Joomill\Module\Resethits</namespace>
 
+    <!-- Files -->
     <files>
         <folder>language</folder>
         <folder module="mod_resethits">services</folder>
@@ -18,6 +19,10 @@
         <folder>tmpl</folder>
     </files>
 
+    <!-- Scripts to run on installation -->
+    <scriptfile>script.php</scriptfile>
+
+    <!-- Config -->
     <config>
         <fields name="params">
             <fieldset name="basic">
@@ -105,12 +110,12 @@
         </fields>
     </config>
 
-    <scriptfile>script.php</scriptfile>
-
+    <!-- Changelog -->
     <changelogurl>
         <![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=changelog&amp;format=xml&amp;cat=2]]>
     </changelogurl>
 
+    <!-- Update servers -->
     <updateservers>
         <server type="extension" name="Reset Hits">
             <![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=updater&amp;format=xml&amp;cat=2]]>

@@ -1,7 +1,7 @@
 <?php
 /*
  *  package: Reset Hits module - FREE Version
- *  copyright: Copyright (c) 2025. Jeroen Moolenschot | Joomill
+ *  copyright: Copyright (c) 2026. Jeroen Moolenschot | Joomill
  *  license: GNU General Public License version 3 or later
  *  link: https://www.joomill-extensions.com
  */
@@ -31,7 +31,7 @@ class ResethitsHelper
 			$languages[] = HTMLHelper::_('select.option', $row->lang_code, $row->title);
 		}
 		$languagelist = HTMLHelper::_('select.genericlist', $languages, 'lang_code', 'class="inputbox"', 'value', 'text', $Language);
-		echo $languagelist;
+		return $languagelist;
 	}
 
 	// Content Helpers
@@ -49,7 +49,7 @@ class ResethitsHelper
 			$articles[] = HTMLHelper::_('select.option', $row->id, $row->title);
 		}
 		$articlelist = HTMLHelper::_('select.genericlist', $articles, 'id', 'class="inputbox"', 'value', 'text', $ContentArticle);
-		echo $articlelist;
+		return $articlelist;
 	}
 
 	public static function getContentCategories()
@@ -67,7 +67,7 @@ class ResethitsHelper
 			$categories[] = HTMLHelper::_('select.option', $row->id, $row->title);
 		}
 		$categorylist = HTMLHelper::_('select.genericlist', $categories, 'catid', 'class="inputbox"', 'value', 'text', $ContentCategory);
-		echo $categorylist;
+		return $categorylist;
 	}
 
 	public static function getContentAuthor()
@@ -84,7 +84,7 @@ class ResethitsHelper
 			$users[] = HTMLHelper::_('select.option', $row->id, $row->name);
 		}
 		$userlist = HTMLHelper::_('select.genericlist', $users, 'created_by', 'class="inputbox"', 'value', 'text', $ContentAuthor);
-		echo $userlist;
+		return $userlist;
 	}
 
 	public static function getContentFeatured()
@@ -94,7 +94,7 @@ class ResethitsHelper
 		$articlefeatured[] = HTMLHelper::_('select.option', '1', Text::_('MOD_RESETHITS_SELECT_FEATURED_YES'));
 		$articlefeatured[] = HTMLHelper::_('select.option', '0', Text::_('MOD_RESETHITS_SELECT_FEATURED_NO'));
 		$articlefeaturedlist = HTMLHelper::_('select.genericlist', $articlefeatured, 'featured', 'class="inputbox"', 'value', 'text', $ContentFeatured);
-		echo $articlefeaturedlist;
+		return $articlefeaturedlist;
 	}
 
 	public static function getContentState()
@@ -106,7 +106,7 @@ class ResethitsHelper
 		$articlestate[] = HTMLHelper::_('select.option', '2', Text::_('JARCHIVED'));
 		$articlestate[] = HTMLHelper::_('select.option', '-2', Text::_('JTRASHED'));
 		$articlestatelist = HTMLHelper::_('select.genericlist', $articlestate, 'state', 'class="inputbox"', 'value', 'text', $ContentState);
-		echo $articlestatelist;
+		return $articlestatelist;
 	}
 
 	// Banner Helpers
@@ -124,7 +124,7 @@ class ResethitsHelper
 			$banner[] = HTMLHelper::_('select.option', $row->id, $row->name);
 		}
 		$bannerlist = HTMLHelper::_('select.genericlist', $banner, 'bannerid', 'class="inputbox"', 'value', 'text', $Banners);
-		echo $bannerlist;
+		return $bannerlist;
 	}
 
 	public static function getBannerCategories()
@@ -142,7 +142,7 @@ class ResethitsHelper
 			$categories[] = HTMLHelper::_('select.option', $row->id, $row->title);
 		}
 		$bannercategorylist = HTMLHelper::_('select.genericlist', $categories, 'bannercatid', 'class="inputbox"', 'value', 'text', $BannerCategory);
-		echo $bannercategorylist;
+		return $bannercategorylist;
 	}
 
 	public static function getBannerClients()
@@ -159,7 +159,7 @@ class ResethitsHelper
 			$client[] = HTMLHelper::_('select.option', $row->id, $row->name);
 		}
 		$clientlist = HTMLHelper::_('select.genericlist', $client, 'bannerclientid', 'class="inputbox"', 'value', 'text', $BannerClients);
-		echo $clientlist;
+		return $clientlist;
 	}
 
 	public static function getBannerLanguage()
@@ -176,7 +176,7 @@ class ResethitsHelper
 			$bannerlanguages[] = HTMLHelper::_('select.option', $row->lang_code, $row->title);
 		}
 		$bannerlanguagelist = HTMLHelper::_('select.genericlist', $bannerlanguages, 'bannerlanguage', 'class="inputbox"', 'value', 'text', $BannerLanguage);
-		echo $bannerlanguagelist;
+		return $bannerlanguagelist;
 	}
 
 	public static function getBannerPinned()
@@ -186,7 +186,7 @@ class ResethitsHelper
 		$bannerspinned[] = HTMLHelper::_('select.option', '1', Text::_('MOD_RESETHITS_SELECT_PINNED_YES'));
 		$bannerspinned[] = HTMLHelper::_('select.option', '0', Text::_('MOD_RESETHITS_SELECT_PINNED_NO'));
 		$bannerspinnedlist = HTMLHelper::_('select.genericlist', $bannerspinned, 'bannerpinned', 'class="inputbox"', 'value', 'text', $BannerPinned);
-		echo $bannerspinnedlist;
+		return $bannerspinnedlist;
 	}
 
 	public static function getBannerState()
@@ -198,7 +198,7 @@ class ResethitsHelper
 		$bannersstate[] = HTMLHelper::_('select.option', '2', Text::_('JARCHIVED'));
 		$bannersstate[] = HTMLHelper::_('select.option', '-2', Text::_('JTRASHED'));
 		$bannersstatelist = HTMLHelper::_('select.genericlist', $bannersstate, 'bannerstate', 'class="inputbox"', 'value', 'text', $BannerState);
-		echo $bannersstatelist;
+		return $bannersstatelist;
 	}
 
 	// User Helpers
@@ -216,7 +216,7 @@ class ResethitsHelper
 			$users[] = HTMLHelper::_('select.option', $row->id, $row->name);
 		}
 		$userpasswordlist = HTMLHelper::_('select.genericlist', $users, 'user', 'class="inputbox"', 'value', 'text', $UserPassword);
-		echo $userpasswordlist;
+		return $userpasswordlist;
 	}
 
 	public static function getUserGroupPassword()
@@ -233,6 +233,6 @@ class ResethitsHelper
 			$usergroups[] = HTMLHelper::_('select.option', $row->id, $row->title);
 		}
 		$usergrouppasswordlist = HTMLHelper::_('select.genericlist', $usergroups, 'usergroup', 'class="inputbox"', 'value', 'text', $UserGroupPassword);
-		echo $usergrouppasswordlist;
+		return $usergrouppasswordlist;
 	}
 }

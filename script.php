@@ -1,13 +1,13 @@
 <?php
 /*
  *  package: Reset Hits module - FREE Version
- *  copyright: Copyright (c) 2025. Jeroen Moolenschot | Joomill
+ *  copyright: Copyright (c) 2026. Jeroen Moolenschot | Joomill
  *  license: GNU General Public License version 3 or later
  *  link: https://www.joomill-extensions.com
  */
 
 // No direct access.
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
 use Joomla\CMS\Installer\InstallerAdapter;
@@ -19,7 +19,7 @@ use Joomla\CMS\Log\Log;
  *
  * @since  4.0.0
  */
-class mod_ResethitsInstallerScript
+class mod_resethitsInstallerScript
 {
 	/**
 	 * Minimum Joomla version to check
@@ -27,7 +27,7 @@ class mod_ResethitsInstallerScript
 	 * @var    string
 	 * @since  4.0.0
 	 */
-	private $minimumJoomlaVersion = '4.0';
+	private $minimumJoomlaVersion = '5.0';
 
 	/**
 	 * Minimum PHP version to check
@@ -160,7 +160,7 @@ class mod_ResethitsInstallerScript
 			echo '<style>a[target="_blank"]::before {display: none};</style>';
 			echo '<div class="mb-3 text-center"><img src="https://www.joomill-extensions.com/images/joomill-logo.png" alt="Joomill Extensions" /></div>';
 			echo '<div class="mb-3 text-center"><strong>' . Text::_('MOD_RESETHITS_XML_DESCRIPTION') . '</strong></div>';
-            echo '<h3 class="text-center">' . Text::_('MOD_RESETHITS_THANKYOU') . '</h3>';
+			echo '<h3 class="text-center">' . Text::_('MOD_RESETHITS_THANKYOU') . '</h3>';
 			echo '<br>';
 			echo '<h3>' . Text::_('MOD_RESETHITS_QUICKSTART') . ':</h3>';
 			echo '<ul>';
