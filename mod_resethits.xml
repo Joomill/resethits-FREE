@@ -24,8 +24,14 @@
 
     <!-- Config -->
     <config>
-        <fields name="params">
+        <fields name="params" addfieldprefix="Joomill\Module\Resethits\Administrator\Field">
             <fieldset name="basic">
+                <field
+                        name="upgrade_note"
+                        type="note"
+                        label="MOD_RESETHITS_UPGRADE_LABEL"
+                        description="MOD_RESETHITS_UPGRADE_DESC"
+                />
                 <field
                         name="articlehits"
                         type="radio"
@@ -92,6 +98,26 @@
                     <option value="0">JHIDE</option>
                     <option value="1">JSHOW</option>
                 </field>
+            </fieldset>
+            <fieldset name="pro" label="MOD_RESETHITS_PRO_FILTERS_LABEL">
+                <field
+                        name="pro_filter_articles"
+                        type="pro"
+                        label="MOD_RESETHITS_PRO_FILTER_ARTICLES_LABEL"
+                        description="MOD_RESETHITS_PRO_FILTER_ARTICLES_DESC"
+                />
+                <field
+                        name="pro_filter_banners"
+                        type="pro"
+                        label="MOD_RESETHITS_PRO_FILTER_BANNERS_LABEL"
+                        description="MOD_RESETHITS_PRO_FILTER_BANNERS_DESC"
+                />
+                <field
+                        name="pro_filter_users"
+                        type="pro"
+                        label="MOD_RESETHITS_PRO_FILTER_USERS_LABEL"
+                        description="MOD_RESETHITS_PRO_FILTER_USERS_DESC"
+                />
             </fieldset>
             <fieldset name="advanced">
                 <field

@@ -9,6 +9,8 @@ All notable changes to the Extension are documented in this file.
 - Improvement: helper methods return their markup instead of echoing it.
 - Standards: consistent `\defined('_JEXEC')` guards, coding-style normalisation (tabs), GPL v3 headers throughout, and the manifest aligned to the Joomill standard.
 - Compatibility: minimum required Joomla version raised to 5.0.
+- Update: restyled the FREE upgrade notice to a single inline success alert, shown in the dashboard and on the module options screen.
+- Update: modernized the PRO upsell to a namespaced ProField that renders a PRO badge linking to the upgrade page.
 
 ## TODO
 - Addition: help buttons now link to the Joomill documentation page

@@ -9,8 +9,12 @@
 // No direct access.
 \defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
 use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\CMS\Language\Text;
+
+Factory::getApplication()->getDocument()->getWebAssetManager()
+	->addInlineStyle('.resethits .alert a[target="_blank"]::before{content:none !important;}.resethits-pro-badge[target="_blank"]::before{content:none !important;}');
 
 ?>
 	 <!--Article Hits-->
@@ -169,4 +173,4 @@ use Joomla\CMS\Language\Text;
 	</li>
 <?php } ?>
 
-<div class="alert alert-success text-center small m-0"><?php echo Text::_('MOD_RESETHITS_FREE_VERSION'); ?><br/><?php echo Text::_('MOD_RESETHITS_FREE_VERSION2'); ?> <a class="alert-link" target="_blank" href="https://www.joomill-extensions.com/extensions/reset-article-views-hits-counter"><?php echo Text::_('MOD_RESETHITS_PRO_VERSION'); ?></a></div>
+<?php echo Text::_('MOD_RESETHITS_UPGRADE_DESC'); ?>
