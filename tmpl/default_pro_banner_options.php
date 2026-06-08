@@ -15,8 +15,7 @@ use Joomla\CMS\Language\Text;
 
 	<div class="row">
 		<div class="collapse resethits-options" id="pro-banner-options" data-bs-parent="#resethits">
-			<hr/>
-			<a class="btn btn-success btn-sm resethits-pro-badge" href="https://www.joomill-extensions.com/extensions/reset-article-views-hits-counter" target="_blank" rel="noopener noreferrer">
+			<a class="btn btn-success btn-sm resethits-pro-badge mb-3" href="https://www.joomill-extensions.com/extensions/reset-article-views-hits-counter" target="_blank" rel="noopener noreferrer">
 				<span class="icon-star icon-white" aria-hidden="true"></span> <?php echo Text::_('MOD_RESETHITS_PRO_ONLY'); ?>
 			</a>
 		</div>
