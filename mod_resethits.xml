@@ -8,7 +8,7 @@
     <license>GNU General Public License version 3 or later</license>
     <creationDate>June 2026</creationDate>
     <copyright>(C) 2026 Joomill Extensions</copyright>
-    <version>5.1.0</version>
+    <version>5.1.1</version>
     <namespace path="src">Joomill\Module\Resethits</namespace>
 
     <!-- Files -->

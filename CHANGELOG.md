@@ -2,6 +2,9 @@
 
 All notable changes to the Extension are documented in this file.
 
+## 5.1.1
+- Fix: banner clicks reset showed the impressions success message instead of the clicks success message.
+
 ## 5.1.0
 - Security: added CSRF token protection to all reset actions.
 - Refactor: moved the reset handling out of the layout into the module Dispatcher.
