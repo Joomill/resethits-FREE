@@ -75,7 +75,7 @@ class Dispatcher extends AbstractModuleDispatcher
 				break;
 
 			case 'com_banner_clicks':
-				$this->resetBanner('clicks', 'MOD_RESETHITS_BANNER_IMPRESSIONS_SUCCESS');
+				$this->resetBanner('clicks', 'MOD_RESETHITS_BANNER_CLICKS_SUCCESS');
 				break;
 
 			case 'com_user_password':
