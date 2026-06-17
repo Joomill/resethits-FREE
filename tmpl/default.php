@@ -13,6 +13,12 @@ use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\CMS\Router\Route;
 
+$wa = $app->getDocument()->getWebAssetManager();
+
+if ($params->get('custom_css')) {
+    $wa->addInlineStyle($params->get('custom_css'));
+}
+
 ?>
 
 	<style>

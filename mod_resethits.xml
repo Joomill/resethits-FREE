@@ -132,6 +132,16 @@
                         label="Header Icon"
                         default="fa-solid fa-arrow-rotate-left"
                 />
+                <field
+                        type="editor"
+                        name="custom_css"
+                        label="MOD_RESETHITS_CUSTOM_CSS_LABEL"
+                        default=""
+                        rows="10"
+                        buttons="no"
+                        editor="codemirror|none"
+                        filter="raw"
+                />
             </fieldset>
         </fields>
     </config>

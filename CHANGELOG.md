@@ -2,6 +2,9 @@
 
 All notable changes to the Extension are documented in this file.
 
+## Unreleased
+- Addition: Custom CSS field in the advanced options to add inline styling, output through the WebAssetManager
+
 ## 5.1.1
 - Fix: banner clicks reset showed the impressions success message instead of the clicks success message.
 - Update: expanded reset type descriptions across all 6 languages (de, en, es, fr, it, nl) to include a second sentence clarifying what is not affected by the reset.
@@ -21,3 +24,4 @@ All notable changes to the Extension are documented in this file.
 - Addition: Support Plugin lazy loading for PHP >= 8.4: Added a possibility to load plugin class on demand (lazy loading) when the event dispatched. For servers with PHP version >= 8.4.
 - Check other updates in the past: https://github.com/joomla/Manual/tree/main/updates
 - Check bc for Joomla 7 release: https://github.com/joomla/Manual/blob/main/updates/64-70/removed-backward-incompatibility.md
+- Check joomla installer script volgens: C:\Obsidian\Joomill-Vault\Joomill\30-snippets\joomla-installer-script.md
