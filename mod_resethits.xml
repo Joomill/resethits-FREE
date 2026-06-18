@@ -146,6 +146,9 @@
         </fields>
     </config>
 
+    <!-- Help button URL -->
+    <help key="" url="MOD_RESETHITS_HELP_URL" />
+
     <!-- Changelog -->
     <changelogurl>
         <![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=changelog&amp;format=xml&amp;cat=2]]>
