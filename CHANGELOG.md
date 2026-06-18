@@ -5,6 +5,7 @@ All notable changes to the Extension are documented in this file.
 ## Unreleased
 - Addition: Custom CSS field in the advanced options to add inline styling, output through the WebAssetManager
 - Addition: the Help toolbar button on the module edit screen now links to the Joomill documentation page
+- Refactor: converted ResethitsHelper from static methods to an instantiated helper resolved through the module HelperFactory, in line with Joomla 7's dependency-injection direction.
 
 ## 5.1.1
 - Fix: banner clicks reset showed the impressions success message instead of the clicks success message.

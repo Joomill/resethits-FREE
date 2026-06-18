@@ -17,7 +17,7 @@ use Joomla\CMS\Language\Text;
 
 class ResethitsHelper
 {
-	public static function getLanguage()
+	public function getLanguage()
 	{
 		$Language = '';
 		$db = Factory::getContainer()->get('DatabaseDriver');
@@ -35,7 +35,7 @@ class ResethitsHelper
 	}
 
 	// Content Helpers
-	public static function getContentArticles()
+	public function getContentArticles()
 	{
 		$ContentArticle = '';
 		$db = Factory::getContainer()->get('DatabaseDriver');
@@ -52,7 +52,7 @@ class ResethitsHelper
 		return $articlelist;
 	}
 
-	public static function getContentCategories()
+	public function getContentCategories()
 	{
 		$ContentCategory = '';
 		$db = Factory::getContainer()->get('DatabaseDriver');
@@ -70,7 +70,7 @@ class ResethitsHelper
 		return $categorylist;
 	}
 
-	public static function getContentAuthor()
+	public function getContentAuthor()
 	{
 		$ContentAuthor = '';
 		$db = Factory::getContainer()->get('DatabaseDriver');
@@ -87,7 +87,7 @@ class ResethitsHelper
 		return $userlist;
 	}
 
-	public static function getContentFeatured()
+	public function getContentFeatured()
 	{
 		$ContentFeatured = '';
 		$articlefeatured[] = HTMLHelper::_('select.option', '', Text::_('MOD_RESETHITS_SELECT_FEATURED'));
@@ -97,7 +97,7 @@ class ResethitsHelper
 		return $articlefeaturedlist;
 	}
 
-	public static function getContentState()
+	public function getContentState()
 	{
 		$ContentState = '';
 		$articlestate[] = HTMLHelper::_('select.option', '', Text::_('MOD_RESETHITS_SELECT_STATE'));
@@ -110,7 +110,7 @@ class ResethitsHelper
 	}
 
 	// Banner Helpers
-	public static function getBanners()
+	public function getBanners()
 	{
 		$Banners = '';
 		$db = Factory::getContainer()->get('DatabaseDriver');
@@ -127,7 +127,7 @@ class ResethitsHelper
 		return $bannerlist;
 	}
 
-	public static function getBannerCategories()
+	public function getBannerCategories()
 	{
 		$BannerCategory = '';
 		$db = Factory::getContainer()->get('DatabaseDriver');
@@ -145,7 +145,7 @@ class ResethitsHelper
 		return $bannercategorylist;
 	}
 
-	public static function getBannerClients()
+	public function getBannerClients()
 	{
 		$BannerClients = '';
 		$db = Factory::getContainer()->get('DatabaseDriver');
@@ -162,7 +162,7 @@ class ResethitsHelper
 		return $clientlist;
 	}
 
-	public static function getBannerLanguage()
+	public function getBannerLanguage()
 	{
 		$BannerLanguage = '';
 		$db = Factory::getContainer()->get('DatabaseDriver');
@@ -179,7 +179,7 @@ class ResethitsHelper
 		return $bannerlanguagelist;
 	}
 
-	public static function getBannerPinned()
+	public function getBannerPinned()
 	{
 		$BannerPinned = '';
 		$bannerspinned[] = HTMLHelper::_('select.option', '', Text::_('MOD_RESETHITS_SELECT_PINNED'));
@@ -189,7 +189,7 @@ class ResethitsHelper
 		return $bannerspinnedlist;
 	}
 
-	public static function getBannerState()
+	public function getBannerState()
 	{
 		$BannerState = '';
 		$bannersstate[] = HTMLHelper::_('select.option', '', Text::_('MOD_RESETHITS_SELECT_STATE'));
@@ -202,7 +202,7 @@ class ResethitsHelper
 	}
 
 	// User Helpers
-	public static function getUserPassword()
+	public function getUserPassword()
 	{
 		$UserPassword = '';
 		$db = Factory::getContainer()->get('DatabaseDriver');
@@ -219,7 +219,7 @@ class ResethitsHelper
 		return $userpasswordlist;
 	}
 
-	public static function getUserGroupPassword()
+	public function getUserGroupPassword()
 	{
 		$UserGroupPassword = '';
 		$db = Factory::getContainer()->get('DatabaseDriver');
