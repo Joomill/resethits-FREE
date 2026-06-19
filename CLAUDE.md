@@ -14,6 +14,12 @@ Twee edities, twee aparte git-repos, identieke mappenstructuur:
 
 Doel: beide edities zo veel mogelijk uit een gedeelde codebase laten lopen. De repos zijn nu ~95% gelijk; de verschillen staan hieronder volledig opgesomd. Houd alle overige bestanden byte-voor-byte gelijk.
 
+## PRO-only system-plugin (plg_system_resethits)
+
+Naast de module bestaat er een losse Joomla system-plugin `plg_system_resethits` (namespace `Joomill\Plugin\System\Resethits`, groep `system`, element `resethits`) die "Reset Hits"-toolbarknoppen toevoegt aan de native admin-schermen (artikelen, banners, gebruikers, redirects) en de tellers reset voor geselecteerde records, de gefilterde lijst, of een enkel record vanuit het bewerkscherm. De plugin werkt direct op de native lijst-/bewerkschermen; de module blijft het losse `cpanel`-paneel.
+
+Deze plugin staat **alleen in de PRO-repo**, onder `plugin/plg_system_resethits/`. Bewuste keuze (2026-06-19): de plugin wordt NIET naar FREE gesynchroniseerd; de FREE-repo bevat alleen de module. De "houd alles byte-identiek"-regel hieronder geldt dus voor de module-bestanden, niet voor de `plugin/`-map (die bestaat enkel in PRO). De plugin heeft zijn eigen `CHANGELOG.md`, manifest (`plugin/plg_system_resethits/resethits.xml`, `cat=6`) en 6 talen, en is verder onafhankelijk van de module.
+
 ## Architectuur
 
 Moderne, namespaced Joomla-module (sinds v5.0.0), namespace `Joomill\Module\Resethits`:
