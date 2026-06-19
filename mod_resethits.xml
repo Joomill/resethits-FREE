@@ -92,6 +92,18 @@
                     <option value="0">JHIDE</option>
                     <option value="1">JSHOW</option>
                 </field>
+                <field
+                        name="hrreview"
+                        type="spacer"
+                        hr="true"
+                />
+                <field
+                        name="notereview"
+                        type="note"
+                        label="MOD_RESETHITS_REVIEW_LABEL"
+                        description="MOD_RESETHITS_REVIEW_DESC"
+                        class="alert alert-success"
+                />
             </fieldset>
             <fieldset name="pro" label="MOD_RESETHITS_PRO_FILTERS_LABEL">
                 <field
@@ -135,18 +147,6 @@
                         buttons="no"
                         editor="codemirror|none"
                         filter="raw"
-                />
-                <field
-                        name="hrreview"
-                        type="spacer"
-                        hr="true"
-                />
-                <field
-                        name="notereview"
-                        type="note"
-                        label="MOD_RESETHITS_REVIEW_LABEL"
-                        description="MOD_RESETHITS_REVIEW_DESC"
-                        class="alert alert-success"
                 />
             </fieldset>
         </fields>
