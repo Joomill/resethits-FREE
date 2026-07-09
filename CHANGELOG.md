@@ -8,6 +8,9 @@ All notable changes to the Extension are documented in this file.
 - Refactor: converted ResethitsHelper from static methods to an instantiated helper resolved through the module HelperFactory, in line with Joomla 7's dependency-injection direction.
 - Standards: rebuilt the installer script to the Joomill InstallerScriptInterface standard (typed signatures, install/update/uninstall, try/catch error logging and a language safety net).
 
+## 5.1.2 - 08/07/2026
+- Addition: Downloads from the Joomill update server now include diagnostic request headers with site and environment information
+
 ## 5.1.1
 - Fix: banner clicks reset showed the impressions success message instead of the clicks success message.
 - Update: expanded reset type descriptions across all 6 languages (de, en, es, fr, it, nl) to include a second sentence clarifying what is not affected by the reset.

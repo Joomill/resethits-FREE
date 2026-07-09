@@ -6,9 +6,9 @@
     <authorEmail>info@joomill.nl</authorEmail>
     <authorUrl>https://www.joomill-extensions.com</authorUrl>
     <license>GNU General Public License version 3 or later</license>
-    <creationDate>June 2026</creationDate>
+    <creationDate>July 2026</creationDate>
     <copyright>(C) 2026 Joomill Extensions</copyright>
-    <version>5.1.1</version>
+    <version>5.1.2</version>
     <namespace path="src">Joomill\Module\Resethits</namespace>
 
     <!-- Files -->
@@ -100,9 +100,7 @@
                 <field
                         name="notereview"
                         type="note"
-                        label="MOD_RESETHITS_REVIEW_LABEL"
                         description="MOD_RESETHITS_REVIEW_DESC"
-                        class="alert alert-success"
                 />
             </fieldset>
             <fieldset name="pro" label="MOD_RESETHITS_PRO_FILTERS_LABEL">
