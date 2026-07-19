@@ -161,7 +161,7 @@
     <!-- Update servers -->
     <updateservers>
         <server type="extension" name="Reset Hits">
-            <![CDATA[https://www.joomill-extensions.com/index.php?option=com_ochsubscriptions&amp;view=updater&amp;format=xml&amp;cat=2]]>
+            <![CDATA[ ]]>
         </server>
     </updateservers>
 </extension>
