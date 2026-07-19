@@ -2,6 +2,9 @@
 
 All notable changes to the Extension are documented in this file.
 
+## 5.1.3 - Unreleased
+- Improvement: PHP file headers updated to the standard Joomla docblock copyright format; code style only, no functional changes
+
 ## Unreleased
 - Addition: Custom CSS field in the advanced options to add inline styling, output through the WebAssetManager
 - Addition: the Help toolbar button on the module edit screen now links to the Joomill documentation page
